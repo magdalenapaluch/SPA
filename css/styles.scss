@@ -1,0 +1,573 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600&subset=latin-ext");
+
+$fontColor: #002676;
+$costColor: #0000ff;
+$greyishColor: #b7becf;
+$raceColor: #00df88;
+$raceSecondaryColor: #4ae4ba;
+
+$screen-sm: 600px;
+$screen-md: 900px;
+$screen-lg: 1200px;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+html {
+	font-family: "Poppins", sans-serif;
+	font-size: 10px;
+	color: $fontColor;
+	width: 100vw;
+}
+
+.universalText {
+	color: $fontColor;
+	font-size: 1.6rem;
+}
+
+.universalText--uppercase {
+	text-transform: uppercase;
+}
+
+.universalText--bold {
+	font-weight: 600;
+}
+
+.secondaryText {
+	font-size: 1.4rem;
+	color: $greyishColor;
+}
+
+.Section {
+	width: 100vw;
+	padding: 0 0;
+	margin-top: 20px;
+
+	@media (min-width: $screen-sm) {
+		// padding: 0 50px;
+		margin-top: 50px;
+	}
+}
+
+.Header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+	padding: 0 10px;
+
+	@media (min-width: $screen-sm) {
+		margin-top: 20px;
+		padding: 0 50px;
+	}
+}
+
+.MainNav {
+	justify-content: space-between;
+}
+
+.MainNav-ul {
+	list-style-type: none;
+	text-align: center;
+
+	@media (min-width: 400px) {
+		display: flex;
+		text-align: left;
+	}
+}
+
+.MainNav-li {
+	a {
+		text-decoration: none;
+		text-align: center;
+		letter-spacing: 1.2px;
+		padding: 5px;
+
+		@media (min-width: $screen-sm) {
+			padding: 0 25px;
+		}
+		@media (min-width: $screen-md) {
+padding: 0 50px;
+		}
+	}
+}
+
+.Header-item {
+	display: flex;
+	flex-shrink: 1;
+}
+
+.IconsSocial {
+	justify-content: center;
+	align-items: center;
+}
+
+.IconsSocial-icon {
+	padding: 10px 0 10px 5px;
+
+	@media (min-width: $screen-sm) {
+		padding: 0 20px 0 0;
+				}
+}
+
+.Board {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	padding: 0 0;
+	margin-top: 25px;
+}
+
+.Map {
+	width: 100%;
+	height: 547px;
+	margin: 0 0 25px;
+}
+
+.gmap_canvas {
+
+	overflow: hidden;
+	background: none !important;
+	height: 547px;
+	width: 100%;
+	background-color: $greyishColor;
+	opacity: 0.35;
+}
+
+.Headline {
+	font-weight: 600;
+	position: absolute;
+	top: 0;
+	font-size: 4rem;
+	width: 90%;
+	text-align: center;
+	left: 10px;
+	margin-top: 10px;
+	z-index: 2;
+
+
+	@media (min-width: $screen-md) {
+		top: 5%;
+		left: 5%;
+		width: 50%;
+		font-size: 9rem;
+		text-align: left;
+	}
+}
+
+
+.Scoreboard {
+	width: 100vw;
+	margin-top: 10px;
+	color: $fontColor;
+
+	@media (min-width: $screen-md) {
+		position: absolute;
+		right: 3vw;
+		// top: 25px;
+		width: auto;
+
+	}
+
+	.Scoreboard-listItem {
+		background-color: white;
+		border-radius: 5px;
+		margin-top: 6px;
+		display: block;
+		counter-increment: li;
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+		padding: 7px 10px 2px 27px;
+		box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.05);
+	}
+
+	.Scoreboard-ol {
+		list-style: none;
+		counter-reset: li;
+	}
+
+	.Scoreboard-listItem::before {
+		content: counter(li);
+		color: $costColor;
+		display: inline-block;
+		width: 1em;
+		// margin-left: 1em;
+		font-size: 1.4rem;
+		font-weight: 600;
+	}
+
+	.Scoreboard-headline {
+		font-size: 27px;
+		border-bottom: 3px solid $fontColor;
+		text-align: center;
+		text-transform: uppercase;
+
+		@media (min-width: $screen-md) {
+			text-transform: none;
+		}
+	}
+
+	.Scoreboard-teamName--winner {
+		font-size: 1.9rem;
+		color: $raceColor;
+	}
+
+	.Scoreboard-listItem--winner::before {
+		@extend .Scoreboard-teamName--winner;
+	}
+
+	.Scoreboard-teamName {
+		display: inline-block;
+		line-height: 18px;
+	}
+
+	.Scoreboard-teamMembers {
+		font-size: 1.2rem;
+		line-height: 18px;
+		color: $greyishColor;
+		font-weight: 500;
+	}
+}
+
+.SponsorsSection {
+	display: flex;
+	flex-direction: column;
+	padding-top: 5%;
+}
+
+.Section-headline {
+	text-transform: uppercase;
+	color: $fontColor;
+	font-size: 2.6rem;
+	width: 100%;
+	text-align: center;
+	border-bottom: 3px solid $fontColor;
+	letter-spacing: 1px;
+
+	@media (min-width: $screen-md) {
+		width: 22%;
+		text-align: right;
+		font-size: 1.6rem;
+		border-bottom: none;
+		color: $greyishColor;
+	}
+}
+
+.Sponsors {
+	width: 100%;
+
+	@media (min-width: $screen-sm) {
+		flex-direction: row;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	@media (min-width: $screen-md) {
+		justify-content: center;
+		padding: 30px 0;
+	}
+}
+
+.Sponsors-item {
+	flex-basis: 25%;
+	display: flex;
+	height: auto;
+	justify-content: center;
+	margin: 60px 0;
+
+	@media (min-width: $screen-md) {
+		margin: 0;
+	}
+}
+
+.PostSection {
+
+	@media (min-width: $screen-sm) {
+		margin-top: 0;
+	}
+}
+
+.PostsContainer {
+
+	@media (min-width: $screen-md) {
+		display: flex;
+		justify-content: center;
+
+	}
+}
+
+.PostSection-aside {
+
+	@media (min-width: $screen-md) {
+		flex-basis: 25vw;
+	}
+}
+
+.PostSection-aside--border {
+	margin-right: 23px;
+	border: none;
+
+	@media (min-width: $screen-md) {
+		border-right: 1px solid $greyishColor;
+		transform: translateY(-25px);
+	}
+}
+
+.PostSection-date {
+	color: $greyishColor;
+	align-content: flex-end;
+	display: flex;
+	flex-direction: column;
+	letter-spacing: 1px;
+	margin: 30px 0 0 40px;
+	float: left;
+	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.05);
+	padding: 5px;
+
+	@media (min-width: $screen-sm) {
+		float: none;
+		padding: 5px;
+		width: 62px;
+		margin: 30px auto 0;
+	}
+
+	@media (min-width: $screen-md) {
+		width: 80%;
+		box-shadow: none;
+		padding: none;
+		margin: 50px auto 0;
+	}
+}
+
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.PostSection-date--up {
+	font-size: 1.9rem;
+	line-height: 1.9rem;
+	text-transform: uppercase;
+	text-align: center;
+
+	@media (min-width: $screen-md) {
+		text-align: right;
+	}
+}
+
+.PostSection-date--down {
+	line-height: 3rem;
+	font-size: 3rem;
+	text-align: center;
+
+	@media (min-width: $screen-md) {
+		text-align: right;
+	}
+}
+
+.Posts {
+	flex-basis: 50%;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+.Post {
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	box-shadow: 0 3px 5px 5px rgba(0, 0, 0, 0.05);
+	padding: 15px 40px 30px 40px;
+	height: auto;
+	margin: 30px auto;
+	max-width: 650px;
+	width: 100%;
+
+	@media (min-width: $screen-md) {
+		margin: 30px 0;
+		position: relative;
+	}
+}
+
+.Post-circle {
+	display: none;
+
+	@media (min-width: $screen-md) {
+		display: block;
+		position: absolute;
+		top:65px;
+		left:-29px;
+		background-color: #fff;
+		border: 1px solid $greyishColor;
+		border-radius: 50%;
+		width: 12px;
+		height: 12px;
+	}
+}
+
+.Post-element {
+	height: auto;
+	padding: 10px 0;
+}
+
+.Post-date {
+	font-weight: 500;
+	padding: 0;
+}
+
+.Post-teamNameAndPlace {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-bottom: 1px solid $greyishColor;
+
+	.Post-teamName {
+		font-size: 3.3rem;
+		font-weight: 600;
+		flex-basis: 60%;
+	}
+
+	.Post-place {
+		flex-basis: 38%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		font-weight: normal;
+
+		.Post-placeName {
+			margin-left: 10px;
+		}
+	}
+}
+
+.Post-title {
+	font-weight: 600;
+	font-size: 1.4rem;
+	border-bottom: 1px solid $greyishColor;
+}
+
+.Post-paragraph {
+	margin-left: 40px;
+}
+
+.Post-paragraph--span {
+	margin-left: 20px;
+	text-transform: none;
+}
+
+.Post-content {
+	height: auto;
+	font-size: 1.4rem;
+
+	.Post-picture {
+		width: 100%;
+
+		@media (min-width: $screen-md) {
+			width: auto;
+			height: 230px;
+		}
+	}
+
+	p {
+		font-size: 1.4rem;
+	}
+}
+
+.Budget {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	text-align: center;
+
+	.Budget-up {
+		height: 100%;
+		font-weight: 600;
+		font-size: 3.3rem;
+		color: $raceColor;
+		padding-top: 20px 0;
+	}
+
+	.Budget-left {
+		height: 100%;
+		color: $greyishColor;
+	}
+}
+
+//FOOTER:
+.Footer-divWave {
+	width: 100%;
+	height: auto;
+	font-size: 0;
+}
+
+.Footer-imgWave {
+	width: 100%;
+	height: 100%;
+	display: block;
+	font-size: 0;
+}
+
+.Footer-info {
+	background-color: $fontColor;
+	font-size: 2rem;
+	color: white;
+	margin-top: -1%;
+	padding: 5% 3vw;
+
+	@media (min-width: $screen-md) {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.Footer-raceName {
+	flex-basis: 49%;
+	color: $raceSecondaryColor;
+	text-transform: uppercase;
+}
+
+.Footer-links {
+	flex-basis: 24%;
+	font-weight: 600;
+}
+
+.Footer-ul {
+	list-style: none;
+}
+
+.Footer-li a,
+.Footer-li {
+	text-decoration: none;
+	color: white;
+}
+
+.Footer-organizer {
+	flex-basis: 24%;
+}
+
+.Footer-designer {
+	margin-top: 2%;
+	flex-basis: 50%;
+	font-size: 1.4rem;
+	align-self: center;
+}
+
+.Footer-contact {
+	margin-top: 2%;
+	flex-basis: 24%;
+}
+
+.Footer-item {
+	margin-top: 20px;
+}

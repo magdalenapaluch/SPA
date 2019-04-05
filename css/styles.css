@@ -1,0 +1,697 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600&subset=latin-ext");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  color: #002676;
+  width: 100vw;
+}
+
+.universalText {
+  color: #002676;
+  font-size: 1.6rem;
+}
+
+.universalText--uppercase {
+  text-transform: uppercase;
+}
+
+.universalText--bold {
+  font-weight: 600;
+}
+
+.secondaryText {
+  font-size: 1.4rem;
+  color: #b7becf;
+}
+
+.Section {
+  width: 100vw;
+  padding: 0 0;
+  margin-top: 20px;
+}
+
+@media (min-width: 600px) {
+  .Section {
+    margin-top: 50px;
+  }
+}
+
+.Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+@media (min-width: 600px) {
+  .Header {
+    margin-top: 20px;
+    padding: 0 50px;
+  }
+}
+
+.MainNav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.MainNav-ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+@media (min-width: 400px) {
+  .MainNav-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+  }
+}
+
+.MainNav-li a {
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 1.2px;
+  padding: 5px;
+}
+
+@media (min-width: 600px) {
+  .MainNav-li a {
+    padding: 0 25px;
+  }
+}
+
+@media (min-width: 900px) {
+  .MainNav-li a {
+    padding: 0 50px;
+  }
+}
+
+.Header-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+.IconsSocial {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.IconsSocial-icon {
+  padding: 10px 0 10px 5px;
+}
+
+@media (min-width: 600px) {
+  .IconsSocial-icon {
+    padding: 0 20px 0 0;
+  }
+}
+
+.Board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  padding: 0 0;
+  margin-top: 25px;
+}
+
+.Map {
+  width: 100%;
+  height: 547px;
+  margin: 0 0 25px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 547px;
+  width: 100%;
+  background-color: #b7becf;
+  opacity: 0.35;
+}
+
+.Headline {
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  font-size: 4rem;
+  width: 90%;
+  text-align: center;
+  left: 10px;
+  margin-top: 10px;
+  z-index: 2;
+}
+
+@media (min-width: 900px) {
+  .Headline {
+    top: 5%;
+    left: 5%;
+    width: 50%;
+    font-size: 9rem;
+    text-align: left;
+  }
+}
+
+.Scoreboard {
+  width: 100vw;
+  margin-top: 10px;
+  color: #002676;
+}
+
+@media (min-width: 900px) {
+  .Scoreboard {
+    position: absolute;
+    right: 3vw;
+    width: auto;
+  }
+}
+
+.Scoreboard .Scoreboard-listItem {
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 6px;
+  display: block;
+  counter-increment: li;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  padding: 7px 10px 2px 27px;
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.05);
+}
+
+.Scoreboard .Scoreboard-ol {
+  list-style: none;
+  counter-reset: li;
+}
+
+.Scoreboard .Scoreboard-listItem::before {
+  content: counter(li);
+  color: #0000ff;
+  display: inline-block;
+  width: 1em;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.Scoreboard .Scoreboard-headline {
+  font-size: 27px;
+  border-bottom: 3px solid #002676;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+  .Scoreboard .Scoreboard-headline {
+    text-transform: none;
+  }
+}
+
+.Scoreboard .Scoreboard-teamName--winner, .Scoreboard .Scoreboard-listItem--winner::before {
+  font-size: 1.9rem;
+  color: #00df88;
+}
+
+.Scoreboard .Scoreboard-teamName {
+  display: inline-block;
+  line-height: 18px;
+}
+
+.Scoreboard .Scoreboard-teamMembers {
+  font-size: 1.2rem;
+  line-height: 18px;
+  color: #b7becf;
+  font-weight: 500;
+}
+
+.SponsorsSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 5%;
+}
+
+.Section-headline {
+  text-transform: uppercase;
+  color: #002676;
+  font-size: 2.6rem;
+  width: 100%;
+  text-align: center;
+  border-bottom: 3px solid #002676;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 900px) {
+  .Section-headline {
+    width: 22%;
+    text-align: right;
+    font-size: 1.6rem;
+    border-bottom: none;
+    color: #b7becf;
+  }
+}
+
+.Sponsors {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .Sponsors {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .Sponsors {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 30px 0;
+  }
+}
+
+.Sponsors-item {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 60px 0;
+}
+
+@media (min-width: 900px) {
+  .Sponsors-item {
+    margin: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .PostSection {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .PostsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .PostSection-aside {
+    -ms-flex-preferred-size: 25vw;
+        flex-basis: 25vw;
+  }
+}
+
+.PostSection-aside--border {
+  margin-right: 23px;
+  border: none;
+}
+
+@media (min-width: 900px) {
+  .PostSection-aside--border {
+    border-right: 1px solid #b7becf;
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }
+}
+
+.PostSection-date {
+  color: #b7becf;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  letter-spacing: 1px;
+  margin: 30px 0 0 40px;
+  float: left;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.05);
+  padding: 5px;
+}
+
+@media (min-width: 600px) {
+  .PostSection-date {
+    float: none;
+    padding: 5px;
+    width: 62px;
+    margin: 30px auto 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .PostSection-date {
+    width: 80%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: none;
+    margin: 50px auto 0;
+  }
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.PostSection-date--up {
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .PostSection-date--up {
+    text-align: right;
+  }
+}
+
+.PostSection-date--down {
+  line-height: 3rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .PostSection-date--down {
+    text-align: right;
+  }
+}
+
+.Posts {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.Post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 5px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 3px 5px 5px rgba(0, 0, 0, 0.05);
+  padding: 15px 40px 30px 40px;
+  height: auto;
+  margin: 30px auto;
+  max-width: 650px;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .Post {
+    margin: 30px 0;
+    position: relative;
+  }
+}
+
+.Post-circle {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .Post-circle {
+    display: block;
+    position: absolute;
+    top: 65px;
+    left: -29px;
+    background-color: #fff;
+    border: 1px solid #b7becf;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.Post-element {
+  height: auto;
+  padding: 10px 0;
+}
+
+.Post-date {
+  font-weight: 500;
+  padding: 0;
+}
+
+.Post-teamNameAndPlace {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #b7becf;
+}
+
+.Post-teamNameAndPlace .Post-teamName {
+  font-size: 3.3rem;
+  font-weight: 600;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+
+.Post-teamNameAndPlace .Post-place {
+  -ms-flex-preferred-size: 38%;
+      flex-basis: 38%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-weight: normal;
+}
+
+.Post-teamNameAndPlace .Post-place .Post-placeName {
+  margin-left: 10px;
+}
+
+.Post-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #b7becf;
+}
+
+.Post-paragraph {
+  margin-left: 40px;
+}
+
+.Post-paragraph--span {
+  margin-left: 20px;
+  text-transform: none;
+}
+
+.Post-content {
+  height: auto;
+  font-size: 1.4rem;
+}
+
+.Post-content .Post-picture {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .Post-content .Post-picture {
+    width: auto;
+    height: 230px;
+  }
+}
+
+.Post-content p {
+  font-size: 1.4rem;
+}
+
+.Budget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+}
+
+.Budget .Budget-up {
+  height: 100%;
+  font-weight: 600;
+  font-size: 3.3rem;
+  color: #00df88;
+  padding-top: 20px 0;
+}
+
+.Budget .Budget-left {
+  height: 100%;
+  color: #b7becf;
+}
+
+.Footer-divWave {
+  width: 100%;
+  height: auto;
+  font-size: 0;
+}
+
+.Footer-imgWave {
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-size: 0;
+}
+
+.Footer-info {
+  background-color: #002676;
+  font-size: 2rem;
+  color: white;
+  margin-top: -1%;
+  padding: 5% 3vw;
+}
+
+@media (min-width: 900px) {
+  .Footer-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.Footer-raceName {
+  -ms-flex-preferred-size: 49%;
+      flex-basis: 49%;
+  color: #4ae4ba;
+  text-transform: uppercase;
+}
+
+.Footer-links {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+  font-weight: 600;
+}
+
+.Footer-ul {
+  list-style: none;
+}
+
+.Footer-li a,
+.Footer-li {
+  text-decoration: none;
+  color: white;
+}
+
+.Footer-organizer {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+}
+
+.Footer-designer {
+  margin-top: 2%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  font-size: 1.4rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.Footer-contact {
+  margin-top: 2%;
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+}
+
+.Footer-item {
+  margin-top: 20px;
+}
+/*# sourceMappingURL=styles.css.map */

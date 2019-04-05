@@ -1,2 +1,2 @@
-# SPA
-Simple responsive non commercial spa
+# LowCostRace
+Test project By All Means - Low Cost Race main page
