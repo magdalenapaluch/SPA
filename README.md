@@ -1,2 +1,5 @@
-# LowCostRace
-Test project By All Means - Low Cost Race main page
+A simple SPA project of Hitchiking Race
+
+plain CSS and HTML
+
+practise of BEM methodology.
